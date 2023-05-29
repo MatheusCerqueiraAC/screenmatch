@@ -1,3 +1,4 @@
+import calculos.CalculadoraDeTempo;
 import modelos.Filme;
 import modelos.Serie;
 
@@ -31,7 +32,18 @@ public class Principal {
 
         System.out.println("duração para maratonar Lost: " + lost.getDuracaoEmMinutos());
 
-    
+        Filme outroFilme = new Filme();
+        outroFilme.setNome("jogos mortais");
+        outroFilme.setAnoDeLancamento(2006);
+        outroFilme.setDuracaoEmMinutos(150);
+
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        calculadora.inclui(meuFilme);
+        calculadora.inclui(outroFilme);
+        calculadora.inclui(lost);
+
+        
+        System.out.println(calculadora.getTempoTotal());
     }
     
 }
