@@ -1,5 +1,7 @@
 package calculos;
 
+import modelos.Titulo;
+
 public class FiltroRecomendacao {
 
     
