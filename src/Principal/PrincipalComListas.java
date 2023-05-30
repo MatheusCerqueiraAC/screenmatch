@@ -1,6 +1,10 @@
 package Principal;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
 
 import modelos.Filme;
 import modelos.Serie;
@@ -19,7 +23,7 @@ public class PrincipalComListas {
         Serie lost = new Serie("Lost", 2000);
 
 
-        ArrayList<Titulo> lista = new ArrayList<>();
+        List<Titulo> lista = new LinkedList<>();
         lista.add(filmeDoPaulo);
         lista.add(meuFilme);
         lista.add(outroFilme);
@@ -33,6 +37,24 @@ public class PrincipalComListas {
     
             }
         }
+
+        ArrayList<String> buscarPorArtistas = new ArrayList<>();
+        buscarPorArtistas.add("Adam Sandler");
+        buscarPorArtistas.add("Paulo");
+        buscarPorArtistas.add("Jacqueline");
+
+        System.out.println(buscarPorArtistas);
+    
+        Collections.sort(buscarPorArtistas);
+        System.out.println("Depois da ordenação");
+        System.out.println(buscarPorArtistas);
+        System.out.println("Lista de titulos ordenados");
+        Collections.sort(lista);
+        System.out.println(lista);
+
+        lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
+        System.out.println("Ordenando por ano");
+        System.out.println(lista);
     }
     
 }
