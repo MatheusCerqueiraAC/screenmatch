@@ -1,10 +1,7 @@
 package calculos;
 
-import modelos.Titulo;
-
 public class FiltroRecomendacao {
 
-    
     public void filtra(Classificavel classificavel) {
 
         if (classificavel.getClassificacao() >= 4) {
